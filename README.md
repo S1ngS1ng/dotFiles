@@ -1,6 +1,6 @@
 # 一些配置文件
 
-[![Chinese](./assets/chinese.svg)](./README.md) [![English](./assets/english.svg)](./README-en.md)
+[![Chinese](https://github.com/S1ngS1ng/dotFiles/blob/master/assets/chinese.svg)](./README.md) [![English](https://github.com/S1ngS1ng/dotFiles/blob/master/assets/english.svg)](./README-en.md)
 
 ## Webstorm
 
