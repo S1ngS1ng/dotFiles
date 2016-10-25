@@ -37,10 +37,10 @@
 - JavaScript
     - `desc`, `it` 可以在测试文件中添加 `describe` 和 `it` block
         - `describe` 的光标默认在引号之间，再按 Tab 可以跳至 `function` 内
-            ![describe](./assets/Describe.png)
+          ![describe](./assets/Describe.png)
         - `it` 光标默认在 `should` 后，再按 Tab 可跳至 `function` 内
-            ![it](./assets/It.png)
- 
+         
+          ![it](./assets/It.png)
 - Lua
     - `---` 可以插入注释块
 - 全局

@@ -39,7 +39,6 @@
             ![describe](./assets/Describe.png)
         - Caret of `it` locates after "should". Hitting tab again will jump to function body
             ![it](./assets/It.png)
- 
 - Lua
     - Use `---` to insert block comment
 - Global
