@@ -4,7 +4,7 @@
 
 ## Webstorm
 
-> tl;dr [Click me](#Install)
+> tl;dr [Click me](#install)
 
 ### Preview
 
