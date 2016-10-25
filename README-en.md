@@ -4,7 +4,7 @@
 
 ## Webstorm
 
-> tl;dr [Click me!](#Install)
+> tl;dr [Click me](#Install)
 
 ### Preview
 
@@ -36,9 +36,9 @@
 - JavaScript
     - Use keyword `desc`, `it` for adding `describe` and `it` block in test files
         - Caret of `describe` locates inside the quotes. Hitting tab again will jump to function body
-            ![describe](./assets/describe.png)
+            ![describe](./assets/Describe.png)
         - Caret of `it` locates after "should". Hitting tab again will jump to function body
-            ![it](./assets/it.png)
+            ![it](./assets/It.png)
  
 - Lua
     - Use `---` to insert block comment
