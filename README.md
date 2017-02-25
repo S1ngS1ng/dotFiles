@@ -1,5 +1,7 @@
 # 一些配置文件
 
+[vim 配置文件](./vim/README.md)
+
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](./README.md) [![English](https://jaywcjlove.github.io/sb/lang/english.svg)](./README-en.md)
 
 ## Webstorm
