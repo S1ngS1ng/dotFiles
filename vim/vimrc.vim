@@ -161,10 +161,17 @@ autocmd VimEnter * wincmd p
 " Exit vim when no active file is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" SuperTab Call omnifunc when available
+autocmd FileType *
+  \ if &omnifunc != '' |
+  \   call SuperTabChain(&omnifunc, "<c-p>") |
+  \   call SuperTabSetDefaultCompletionType("<c-x><c-u>") |
+  \ endif
+
 " Toggle NERDTree with F3
 map <silent> <F3> :NERDTreeToggle<CR>
 
-" Toggle TagBar with F4
+" Toggle TagBar with F8
 nmap <F8> :TagbarToggle<CR>
 
 " compile and run file automatically
