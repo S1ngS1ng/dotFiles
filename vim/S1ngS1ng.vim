@@ -99,10 +99,13 @@ hi erubyDelimiter ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui
 hi erubyComment ctermfg=61 ctermbg=NONE cterm=NONE guifg=#6272a4 guibg=NONE gui=NONE
 hi erubyRailsMethod ctermfg=117 ctermbg=NONE cterm=NONE guifg=#8be9fd guibg=NONE gui=NONE
 hi htmlTag ctermfg=244 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+" script, style
+hi htmlSpecialTagName ctermfg=198 ctermbg=NONE cterm=NONE guifg=#ff0087 guibg=NONE gui=NONE
 hi htmlEndTag ctermfg=244 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi htmlTagName ctermfg=160 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-hi htmlArg ctermfg=140 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+hi htmlTagName ctermfg=197 ctermbg=NONE cterm=NONE guifg=#ff005f guibg=NONE gui=NONE
 hi htmlSpecialChar ctermfg=141 ctermbg=NONE cterm=NONE guifg=#bd93f9 guibg=NONE gui=NONE
+" Supports AngularJS attribute
+hi htmlArg ctermfg=141 ctermbg=NONE cterm=NONE guifg=#af87ff guibg=NONE gui=NONE
 
 " Function
 hi javaScriptFuncKeyword ctermfg=213 ctermbg=NONE cterm=NONE guifg=#ff87ff guibg=NONE gui=italic

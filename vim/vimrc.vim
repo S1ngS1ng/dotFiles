@@ -1,35 +1,45 @@
 " Leader key as Space bar
 let mapleader = ' '
+
 " Dash app
 nnoremap <Leader>d :Dash<CR>
 
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>q :x<CR>
 
 " Remove highlight for pattern match
 nnoremap <Leader>n :noh<CR>
 
 " Close quickfix window, for Syntastics
-nnoremap <Leader>c :lcl<CR>
+nnoremap <Leader>lc :lcl<CR>
 
-" Ctrl + HJKL for arrow keys
-inoremap <c-h> <left>
-inoremap <c-j> <down>
-inoremap <c-k> <up>
-inoremap <c-l> <right>
+" Find path in NERDTree
+nnoremap <Leader>f :NERDTreeFind<CR>
+
+" read index
+nnoremap <Leader>r :read !node index<CR>
 
 " Switch between windows
+" Leader + h/j/k/l
 noremap <Leader>h <c-w>h
 noremap <Leader>j <c-w>j
 noremap <Leader>k <c-w>k
 noremap <Leader>l <c-w>l
 
-" Switch between tabs
-noremap <Leader>t gt
-noremap <Leader>T gT
+" Ctrl + HJKL for arrow keys - Moved To HammerSpoon
+" inoremap <c-h> <left>
+" inoremap <c-j> <down>
+" inoremap <c-k> <up>
+" inoremap <c-l> <right>
+
+" Switch between tabs (Hammerspoon?)
+" Shift + Ctrl + h/l
+nnoremap <C-L> gt
+nnoremap <C-H> gT
 
 " To enable copy from system
 set clipboard=unnamed
+set encoding=utf8
 
 " Required!
 set nocompatible
@@ -43,6 +53,7 @@ set shiftwidth=4
 set expandtab
 set showcmd
 set showmatch
+autocmd FileType lua setlocal expandtab shiftwidth=2 softtabstop=2
 
 " Set relative number
 set number
@@ -60,10 +71,12 @@ color S1ngS1ng
 
 call plug#begin('~/.vim/plugged')
 
+" Wakatime, track coding time
+Plug 'wakatime/vim-wakatime'
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'powerline/powerline', { 'branch': 'develop' } 
-
 
 " Dash vim
 Plug 'rizzatti/dash.vim'
@@ -97,7 +110,7 @@ Plug 'myusuf3/numbers.vim'
 Plug 'dkprice/vim-easygrep'
 
 " Javascript
-" Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/javascript-libraries-syntax.vim'
 
@@ -134,6 +147,9 @@ Plug 'airblade/vim-gitgutter'
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
 
+" Tagbar for Java
+Plug 'majutsushi/tagbar'
+
 call plug#end()
 
 " Not working in terminal
@@ -148,6 +164,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Toggle NERDTree with F3
 map <silent> <F3> :NERDTreeToggle<CR>
 
+" Toggle TagBar with F4
+nmap <F8> :TagbarToggle<CR>
+
 " compile and run file automatically
 autocmd filetype python map <F2> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype javascript map <F2> :w <bar> exec '!node '.shellescape('%')<CR>
@@ -155,18 +174,12 @@ autocmd filetype javascript map <F2> :w <bar> exec '!node '.shellescape('%')<CR>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set laststatus=2
 
-" Set buffer status bar
+" Set buffer status bar, on the top
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-
-let g:ycm_path_to_python_interpreter = '/usr/local/bin/python3'
-let g:ycm_server_use_vim_stdout=0
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_auto_trigger = 1
-
-let g:pymode_lint = 0
 
 let g:syntastic_loc_list_height = 3
 let g:syntastic_always_populate_loc_list = 1
@@ -174,12 +187,19 @@ let g:syntastic_auto_loc_list = 1
 " let g:syntastic_ignore_files = ['.py$']
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
+let g:used_javascript_libs = 'underscore,angularjs,react,requirejs,jasmine,chai'
 
 let g:indentLine_color_term = 237
 
 " Set default gui font
 set guifont=Monaco:h25
 
+" Set vim-markdown conceal level
+let g:vim_markdown_conceal=0
+
+" Enable Omni complate
+set omnifunc=syntaxcomplete#Complete
