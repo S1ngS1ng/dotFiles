@@ -33,9 +33,9 @@ noremap <Leader>l <c-w>l
 " inoremap <c-l> <right>
 
 " Switch between tabs (Hammerspoon?)
-" Shift + Ctrl + h/l
-nnoremap <C-L> gt
-nnoremap <C-H> gT
+" Leader + t/T
+nnoremap <Leader>t gt
+nnoremap <Leader>T gT
 
 " To enable copy from system
 set clipboard=unnamed
