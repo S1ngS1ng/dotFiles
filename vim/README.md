@@ -12,7 +12,7 @@
     - f: 在 NERDTree 中寻找当前路径
     - r: 读取 `node index` 的输出结果
     - h/j/k/l: 跳转到其他分屏窗口
-- Shift + Ctrl + h/l: 跳转到上/下一个 tab
+    - g/G: 跳转到上/下一个 tab
 - F2: 运行当前的 `.js` 或 `.py` 文件
 - F3: 显示/隐藏 NERDTree
 - F8: 显示 Tagbar
