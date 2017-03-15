@@ -12,7 +12,7 @@
     - f: Open current path in NERDTree
     - r: Read `node index` output
     - h/j/k/l: Jump to other splitted window
-- Shift + Ctrl + h/l: Jump to next/previous tab
+    - g/G: Jump to next/previous tab
 - F2: Run current `.js` or `.py` script
 - F3: Toggle NERDTree
 - F8: Show Tagbar
