@@ -13,11 +13,17 @@ nnoremap <Leader>n :noh<CR>
 " Close quickfix window, for Syntastics
 nnoremap <Leader>lc :lcl<CR>
 
+" Close quickfix window, for PyMode
+nnoremap <Leader>cl :ccl<CR>
+
 " Find path in NERDTree
 nnoremap <Leader>f :NERDTreeFind<CR>
 
-" read index
+" Run index.js in Node.js, output to new buffer
 nnoremap <Leader>r :read !node index<CR>
+
+" Goyo toggle, distraction free
+nnoremap <Leader>g :Goyo<CR>
 
 " Switch between windows
 " Leader + h/j/k/l
@@ -70,6 +76,9 @@ color S1ngS1ng
 " color dracula
 
 call plug#begin('~/.vim/plugged')
+
+" Goyo, distraction-free writing
+Plug 'junegunn/goyo.vim'
 
 " Wakatime, track coding time
 Plug 'wakatime/vim-wakatime'

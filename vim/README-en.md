@@ -9,8 +9,10 @@
     - q: Quit
     - n: Cancel search highlighting
     - lc: Close QuickFix (for Syntastic)
+    - cl: Close QuickFix（PyMode）
     - f: Open current path in NERDTree
     - r: Read `node index` output
+    - g: Toggle Goyo
     - h/j/k/l: Jump to other splitted window
     - g/G: Jump to next/previous tab
 - F2: Run current `.js` or `.py` script
@@ -18,6 +20,7 @@
 - F8: Show Tagbar
 
 # Plugins
+- [goyo](https://github.com/junegunn/goyo.vim): Distraction-free mode in Vim
 - [vim-wakatime](https://github.com/wakatime/vim-wakatime): wakatime official plugin
 - [vim-airline](https://github.com/vim-airline/vim-airline): airline status bar
     - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)

@@ -9,8 +9,10 @@
     - q: 退出
     - n: 取消搜索高亮
     - lc: 关闭 QuickFix（Syntastic）
+    - cl: 关闭 QuickFix（PyMode）
     - f: 在 NERDTree 中寻找当前路径
     - r: 读取 `node index` 的输出结果
+    - g: 切换 Goyo
     - h/j/k/l: 跳转到其他分屏窗口
     - g/G: 跳转到上/下一个 tab
 - F2: 运行当前的 `.js` 或 `.py` 文件
@@ -18,6 +20,7 @@
 - F8: 显示 Tagbar
 
 # 插件
+- [goyo](https://github.com/junegunn/goyo.vim): 在 vim 中开启专注模式
 - [vim-wakatime](https://github.com/wakatime/vim-wakatime): wakatime 官方插件
 - [vim-airline](https://github.com/vim-airline/vim-airline): 状态条
     - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
