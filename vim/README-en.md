@@ -26,6 +26,7 @@
     - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 - [dash.vim](https://github.com/rizzatti/dash.vim): Official plugin for Dash
 - [tern_for_vim](https://github.com/ternjs/tern_for_vim): Jump to definition, refactor variable
+    - Modification under Windows: [Original Issue](https://github.com/ternjs/tern_for_vim/issues/119)
 - [vim-surround](https://github.com/tpope/vim-surround): Quick surround text
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): Auto pair symbols
 - [dracula](https://github.com/dracula/vim): Dracula VIM color theme

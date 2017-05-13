@@ -26,6 +26,7 @@
     - [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 - [dash.vim](https://github.com/rizzatti/dash.vim): Dash 官方插件
 - [tern_for_vim](https://github.com/ternjs/tern_for_vim): 定义跳转，变量重构
+    - Windows 下的修改：[源项目中的讨论](https://github.com/ternjs/tern_for_vim/issues/119)
 - [vim-surround](https://github.com/tpope/vim-surround): 快速包围
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): 符号配对
 - [dracula](https://github.com/dracula/vim): Dracula VIM 配色
