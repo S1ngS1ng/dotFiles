@@ -26,11 +26,11 @@ nnoremap <Leader>r :read !node index<CR>
 nnoremap <Leader>g :Goyo<CR>
 
 " Switch between windows
-" Leader + h/j/k/l
-noremap <Leader>h <c-w>h
-noremap <Leader>j <c-w>j
-noremap <Leader>k <c-w>k
-noremap <Leader>l <c-w>l
+" Leader + hh/jj/kk/ll
+noremap <Leader>hh :wincmd h<CR>
+noremap <Leader>jj :wincmd j<CR>
+noremap <Leader>kk :wincmd k<CR>
+noremap <Leader>ll :wincmd l<CR>
 
 " Ctrl + HJKL for arrow keys - Moved To HammerSpoon
 " inoremap <c-h> <left>
