@@ -27,10 +27,10 @@ nnoremap <Leader>g :Goyo<CR>
 
 " Switch between windows
 " Leader + hh/jj/kk/ll
-noremap <Leader>hh :wincmd h<CR>
-noremap <Leader>jj :wincmd j<CR>
-noremap <Leader>kk :wincmd k<CR>
-noremap <Leader>ll :wincmd l<CR>
+noremap <Leader>h :wincmd h<CR>
+noremap <Leader>j :wincmd j<CR>
+noremap <Leader>k :wincmd k<CR>
+noremap <Leader>l :wincmd l<CR>
 
 " Ctrl + HJKL for arrow keys - Moved To HammerSpoon
 " inoremap <c-h> <left>
@@ -42,6 +42,10 @@ noremap <Leader>ll :wincmd l<CR>
 " Leader + t/T
 nnoremap <Leader>t gt
 nnoremap <Leader>T gT
+
+" Keep visual mode when changing indent
+vnoremap < <gv
+vnoremap > >gv
 
 " To enable copy from system
 set clipboard=unnamed
