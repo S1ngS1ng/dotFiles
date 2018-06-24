@@ -1,0 +1,70 @@
+" Leader key as Space bar
+let mapleader = ' '
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :x<CR>
+
+" Remove highlight for pattern match
+nnoremap <Leader>n :noh<CR>
+
+" Switch between split windows
+" Leader + h/j/k/l
+noremap <Leader>h <c-w>h
+noremap <Leader>j <c-w>j
+noremap <Leader>k <c-w>k
+noremap <Leader>l <c-w>l
+
+" Scroll horizontally
+" Leader + H/L
+noremap <Leader>H :action ScrollPane-scrollLeft<CR>
+noremap <Leader>L :action ScrollPane-scrollRight<CR>
+
+" Switch between tabs (Hammerspoon?)
+" Leader + t/T
+nnoremap <Leader>t :action VimMotionNextTab<CR>
+nnoremap <Leader>p :action VimMotionPreviousTab<CR>
+
+" Keep visual mode when setting indent
+vnoremap < <gv
+vnoremap > >gv
+
+" To enable copy from system
+set clipboard=unnamed
+set encoding=utf8
+
+" Required!
+set nocompatible
+filetype on
+syntax enable
+syntax on
+set hlsearch
+set wrapscan
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set showcmd
+set showmatch
+set ff=unix
+
+" Use existing tab or open newtab
+:set switchbuf+=usetab,newtab
+
+" Set relative number
+set rnu
+
+" Highlight current cursor line
+set cursorline
+" autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+" Set global ignore
+set wildignore+=./node_modules/**,./build
+
+" Fold method
+set foldmethod=syntax
+set nofoldenable
+
+" Fold shortcut map
+nnoremap <Leader>a za
+nnoremap <Leader>R zR
+vnoremap <Leader>a za
+vnoremap <Leader>R zR
