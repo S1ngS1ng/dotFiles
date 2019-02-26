@@ -28,7 +28,7 @@ hi CursorColumn ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#3d3f49 gui
 hi ColorColumn ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=#3d3f49 gui=NONE
 hi LineNr ctermfg=120 ctermbg=NONE cterm=NONE guifg=#909194 guibg=#282a36 gui=NONE
 hi VertSplit ctermfg=243 ctermbg=236 cterm=bold guifg=#767676 guibg=#303030 gui=bold
-hi MatchParen ctermfg=241 ctermbg=NONE cterm=underline guifg=#626262 guibg=NONE gui=underline
+hi MatchParen ctermfg=249 ctermbg=NONE cterm=underline guifg=#626262 guibg=NONE gui=underline
 hi StatusLine ctermfg=231 ctermbg=236 cterm=bold guifg=#f8f8f2 guibg=#64666d gui=bold
 hi StatusLineNC ctermfg=231 ctermbg=236 cterm=NONE guifg=#f8f8f2 guibg=#64666d gui=NONE
 hi Pmenu ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
@@ -42,7 +42,7 @@ hi FoldColmun ctermfg=246 ctermbg=235 cterm=NONE guifg=#909194 guibg=#44475a gui
 hi Normal ctermbg=234 guifg=#f8f8f2 guibg=#282a36 gui=NONE
 hi Boolean ctermfg=201 ctermbg=NONE cterm=bold guifg=#bd93f9 guibg=NONE gui=NONE
 hi Character ctermfg=120 ctermbg=NONE cterm=NONE guifg=#bd93f9 guibg=NONE gui=NONE
-hi Comment ctermfg=241 ctermbg=NONE cterm=NONE guifg=#6272a4 guibg=NONE gui=NONE
+hi Comment ctermfg=247 ctermbg=NONE cterm=NONE guifg=#6272a4 guibg=NONE gui=NONE
 hi Conditional ctermfg=213 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
 hi Constant ctermfg=211 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi Define ctermfg=198 ctermbg=NONE cterm=NONE guifg=#ff79c6 guibg=NONE gui=NONE
@@ -136,6 +136,19 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi TabLineFill  guifg=#333333 guibg=#282a36 gui=none
 hi TabLine      guifg=#666666 guibg=#282a36 gui=none
 hi TabLineSel   guifg=WHITE guibg=#282a36 gui=none
+" From vim-javascript
+" const, let, var 
+hi jsStorageClass ctermfg=177 ctermbg=NONE cterm=bold guifg=#d787ff guibg=NONE gui=NONE
+hi jsDocTags ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
+hi jsAsyncKeyword ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
+hi jsForAwait ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
+hi jsVariableDef ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
+hi jsTemplateExpression ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
+hi jsObjectKey ctermfg=209 ctermbg=NONE cterm=NONE guifg=#ff875f guibg=NONE gui=NONE
+hi jsParen ctermfg=211 ctermbg=NONE cterm=NONE guifg=#ff87af guibg=NONE gui=NONE
+hi jsDestructuringBlock ctermfg=214 ctermbg=NONE cterm=NONE guifg=#ffaf00 guibg=NONE gui=NONE
+hi jsFuncArgs ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
+hi jsArrowFuncArgs ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
 
 "-------------------
 "
@@ -150,3 +163,4 @@ hi TabLineSel   guifg=WHITE guibg=#282a36 gui=none
 
 execute "set background=dark"
 "-------------------
+

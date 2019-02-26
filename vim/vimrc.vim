@@ -11,10 +11,10 @@ nnoremap <Leader>q :x<CR>
 nnoremap <Leader>n :noh<CR>
 
 " Close quickfix window, for Syntastics
-nnoremap <Leader>lc :lcl<CR>
+" nnoremap <Leader>lc :lcl<CR>
 
 " Close quickfix window, for PyMode
-nnoremap <Leader>cl :ccl<CR>
+" nnoremap <Leader>cl :ccl<CR>
 
 " Find path in NERDTree
 nnoremap <Leader>f :NERDTreeFind<CR>
@@ -22,26 +22,16 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 " Run index.js in Node.js, output to new buffer
 nnoremap <Leader>r :read !node index<CR>
 
-" Goyo toggle, distraction free
-nnoremap <Leader>g :Goyo<CR>
-
 " Switch between windows
-" Leader + hh/jj/kk/ll
-noremap <Leader>h :wincmd h<CR>
-noremap <Leader>j :wincmd j<CR>
-noremap <Leader>k :wincmd k<CR>
-noremap <Leader>l :wincmd l<CR>
-
-" Ctrl + HJKL for arrow keys - Moved To HammerSpoon
-" inoremap <c-h> <left>
-" inoremap <c-j> <down>
-" inoremap <c-k> <up>
-" inoremap <c-l> <right>
+" Leader + h/j/k/l
+noremap <Leader>h <c-w>h
+noremap <Leader>j <c-w>j
+noremap <Leader>k <c-w>k
+noremap <Leader>l <c-w>l
 
 " Switch between tabs (Hammerspoon?)
-" Leader + t/T
 nnoremap <Leader>t gt
-nnoremap <Leader>T gT
+nnoremap <Leader>p gT
 
 " Keep visual mode when changing indent
 vnoremap < <gv
@@ -65,7 +55,11 @@ set showcmd
 set showmatch
 autocmd FileType lua setlocal expandtab shiftwidth=2 softtabstop=2
 
+" Ignore node_modules
+set wildignore+=node_modules/**
+
 " Set relative number
+set relativenumber
 set number
 
 " Highlight current cursor line
@@ -82,7 +76,7 @@ color S1ngS1ng
 call plug#begin('~/.vim/plugged')
 
 " Goyo, distraction-free writing
-Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/goyo.vim'
 
 " Wakatime, track coding time
 Plug 'wakatime/vim-wakatime'
@@ -95,7 +89,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rizzatti/dash.vim'
 
 " Tern Plugin, jump to def
-Plug 'ternjs/tern_for_vim'
+" Plug 'ternjs/tern_for_vim'
 
 " Vim Surround
 Plug 'tpope/vim-surround'
@@ -117,14 +111,16 @@ Plug 'ervandew/supertab'
 Plug 'yggdroot/indentline'
 
 " Line Number
-Plug 'myusuf3/numbers.vim'
+" Plug 'myusuf3/numbers.vim'
 
 " Easy grep
-Plug 'dkprice/vim-easygrep'
+" Plug 'dkprice/vim-easygrep'
+Plug 'wincent/ferret'
 
 " Javascript
 Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
 
 " Markdown
@@ -137,7 +133,7 @@ Plug 'elzr/vim-json'
 Plug 'klen/python-mode', { 'branch': 'develop' } 
 
 " Basic Library
-Plug 'vim-scripts/L9'
+" Plug 'vim-scripts/L9'
 
 " Search file with Ctrl+P
 Plug 'ctrlpvim/ctrlp.vim'
@@ -160,8 +156,8 @@ Plug 'airblade/vim-gitgutter'
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
 
-" Tagbar for Java
-Plug 'majutsushi/tagbar'
+" elm support
+Plug 'elmcast/elm-vim'
 
 call plug#end()
 
@@ -184,12 +180,9 @@ autocmd FileType *
 " Toggle NERDTree with F3
 map <silent> <F3> :NERDTreeToggle<CR>
 
-" Toggle TagBar with F8
-nmap <F8> :TagbarToggle<CR>
-
 " compile and run file automatically
 autocmd filetype python map <F2> :w <bar> exec '!python '.shellescape('%')<CR>
-autocmd filetype javascript map <F2> :w <bar> exec '!node '.shellescape('%')<CR>
+" autocmd filetype javascript map <F2> :w <bar> exec '!node '.shellescape('%')<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -220,6 +213,29 @@ set guifont=Monaco:h25
 
 " Set vim-markdown conceal level
 let g:vim_markdown_conceal=0
+map <leader>o :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+
+" elm format on save
+let g:elm_format_autosave = 1
+
+" disable elm default keybindings
+let g:elm_setup_keybindins = 0
 
 " Enable Omni complate
 set omnifunc=syntaxcomplete#Complete
+
+function RunWithNode(opType)
+    set syntax=javascript
+    let @x = system('node', getline('0', '$'))
+    if a:opType == "print"
+        echo @x
+    elseif a:opType == "paste"
+        execute 'normal Go'
+        execute '.!echo "\n-----Node.js output-----"'
+        execute 'normal G"xp``'
+    endif
+endfunction
+
+map <F2> :call RunWithNode('print')<CR>
+map <Leader><F2> :call RunWithNode('paste')<CR>
+
