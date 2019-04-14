@@ -10,12 +10,6 @@ nnoremap <Leader>q :x<CR>
 " Remove highlight for pattern match
 nnoremap <Leader>n :noh<CR>
 
-" Close quickfix window, for Syntastics
-" nnoremap <Leader>lc :lcl<CR>
-
-" Close quickfix window, for PyMode
-" nnoremap <Leader>cl :ccl<CR>
-
 " Find path in NERDTree
 nnoremap <Leader>f :NERDTreeFind<CR>
 
@@ -75,21 +69,14 @@ color S1ngS1ng
 
 call plug#begin('~/.vim/plugged')
 
-" Goyo, distraction-free writing
-" Plug 'junegunn/goyo.vim'
-
 " Wakatime, track coding time
 Plug 'wakatime/vim-wakatime'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'powerline/powerline', { 'branch': 'develop' } 
 
 " Dash vim
 Plug 'rizzatti/dash.vim'
-
-" Tern Plugin, jump to def
-" Plug 'ternjs/tern_for_vim'
 
 " Vim Surround
 Plug 'tpope/vim-surround'
@@ -100,28 +87,25 @@ Plug 'jiangmiao/auto-pairs'
 " Dracular Theme
 Plug 'dracula/vim'
 
-" Material Theme
-" Plug 'jdkanani/vim-material-theme'
-
 " Auto Complete
-" Plug 'valloric/youcompleteme'
 Plug 'ervandew/supertab'
 
 " Indent Level
 Plug 'yggdroot/indentline'
 
-" Line Number
-" Plug 'myusuf3/numbers.vim'
-
 " Easy grep
 " Plug 'dkprice/vim-easygrep'
 Plug 'wincent/ferret'
 
-" Javascript
+" JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'heavenshell/vim-jsdoc'
+
+" TypeScript
+Plug 'leafgarland/typescript-vim'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
@@ -132,17 +116,15 @@ Plug 'elzr/vim-json'
 " Python
 Plug 'klen/python-mode', { 'branch': 'develop' } 
 
-" Basic Library
-" Plug 'vim-scripts/L9'
-
-" Search file with Ctrl+P
-Plug 'ctrlpvim/ctrlp.vim'
+" FZF
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Allign Code
 Plug 'godlygeek/tabular'
 
 " Syntax check
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 
 " Emmet
 Plug 'mattn/emmet-vim'
@@ -159,16 +141,32 @@ Plug 'editorconfig/editorconfig-vim'
 " elm support
 Plug 'elmcast/elm-vim'
 
-call plug#end()
+" TOML support
+Plug 'cespare/vim-toml'
 
-" Not working in terminal
-" let g:dracula_italic = 1
+" Go support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+" CSS3 support
+" Plug 'hail2u/vim-css3-syntax'
+
+" Sass/Scss support
+Plug 'cakebaker/scss-syntax.vim'
+
+" CSS color
+Plug 'ap/vim-css-color'
+
+call plug#end()
 
 " autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 " Exit vim when no active file is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" NERDTree show hidden by default
+let NERDTreeShowHidden = 1
+" NERDTree ignore file pattern
+let NERDTreeIgnore = ['^\.DS_Store$', '\.swp$']
 
 " SuperTab Call omnifunc when available
 autocmd FileType *
@@ -184,29 +182,48 @@ map <silent> <F3> :NERDTreeToggle<CR>
 autocmd filetype python map <F2> :w <bar> exec '!python '.shellescape('%')<CR>
 " autocmd filetype javascript map <F2> :w <bar> exec '!node '.shellescape('%')<CR>
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-set laststatus=2
+" ALE config
+let g:ale_linters = {
+\   'html': ['prettier'],
+\   'javascript': ['prettier', 'eslint'],
+\   'css': ['prettier'],
+\   'scss': ['stylelint'],
+\   'sass': ['stylelint'],
+\}
+let g:ale_fixers = {
+\   'html': ['prettier'],
+\   'javascript': ['prettier-eslint'],
+\   'css': ['prettier'],
+\   'scss': ['stylelint'],
+\   'sass': ['stylelint'],
+\}
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+" Enable elt completion
+let g:ale_completion_enabled = 1
+
+map <Leader>g :ALEGoToDefinition<CR>
+map <C-P> :FZF<CR>
 
 " Set buffer status bar, on the top
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-
-let g:syntastic_loc_list_height = 3
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-" let g:syntastic_ignore_files = ['.py$']
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+" Enable airline extension of ale
+let g:airline#extensions#ale#enabled = 1
 
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:used_javascript_libs = 'underscore,angularjs,react,requirejs,jasmine,chai'
 
 let g:indentLine_color_term = 237
+
+" For vim-jsdoc
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_underscore_private = 1
+let g:jsdoc_param_description_separator = '-'
+let g:jsdoc_enable_es6 = 1
 
 " Set default gui font
 set guifont=Monaco:h25
@@ -217,12 +234,17 @@ map <leader>o :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<
 
 " elm format on save
 let g:elm_format_autosave = 1
-
 " disable elm default keybindings
 let g:elm_setup_keybindins = 0
 
 " Enable Omni complate
 set omnifunc=syntaxcomplete#Complete
+
+" Enable terminalguicolors (iTerm2)
+set termguicolors
+
+" Add keyword for function names in Sass/Scss
+autocmd FileType scss set iskeyword+=-
 
 function RunWithNode(opType)
     set syntax=javascript
@@ -238,4 +260,17 @@ endfunction
 
 map <F2> :call RunWithNode('print')<CR>
 map <Leader><F2> :call RunWithNode('paste')<CR>
+
+" Enable go template syntax when hugo config is found
+function EnableGoTmplSyntax()
+    if filereadable('config.toml') || filereadable('theme.toml') || filereadable('config.yaml') || filereadable('config.json')
+        autocmd BufRead *.html
+            \ set ft=gohtmltmpl
+    endif
+endfunction
+call EnableGoTmplSyntax()
+
+set switchbuf+=newtab
+
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
