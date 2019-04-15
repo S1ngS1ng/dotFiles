@@ -4,6 +4,14 @@
 
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](./README.md) [![English](https://jaywcjlove.github.io/sb/lang/english.svg)](./README-en.md)
 
+## 我使用的字体（4/14/2019 更新）
+使用 [Ligaturizer](https://github.com/ToxicFrog/Ligaturizer) build 的 LigaMonaco，包含两个版本：
+- [常规体](./font/LigaMonaco.ttf)
+- [粗体](./font/LigaMonacoBold.ttf)
+
+### 预览
+![LigaMonaco](./assets/LigaMonaco-demo.png)
+
 ## Webstorm
 
 > 安装方法：[点我](#安装)

@@ -4,6 +4,14 @@
 
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](./README.md) [![English](https://jaywcjlove.github.io/sb/lang/english.svg)](./README-en.md)
 
+## Font I use (Update 4/14/2019)
+LigaMonaco built w/ [Ligaturizer](https://github.com/ToxicFrog/Ligaturizer), including:
+- [normal](./font/LigaMonaco.ttf)
+- [bold](./font/LigaMonacoBold.ttf)
+
+### Preview
+![LigaMonaco](./assets/LigaMonaco-demo.png)
+
 ## Webstorm
 
 > tl;dr [Click me](#install)
