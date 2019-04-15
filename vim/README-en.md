@@ -3,7 +3,7 @@
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](./README.md) [![English](https://jaywcjlove.github.io/sb/lang/english.svg)](./README-en.md)
 
 # Font
-- Liga Monaco
+- [Liga Monaco](../font)
 - Fallback: Monaco
 # Note
 - `termguicolors` is enabled by default
@@ -58,4 +58,9 @@
 - [elm-vim](https://github.com/ElmCast/elm-vim): Elm official plugin
 - [vim-toml](https://github.com/cespare/vim-toml): TOML official plugin
 - [vim-go](https://github.com/fatih/vim-go): Go lang support
+
+# Color scheme
+[S1ngS1ng.vim](./S1ngS1ng.vim)
+## Preview
+![vim](./assets/vim.png)
 

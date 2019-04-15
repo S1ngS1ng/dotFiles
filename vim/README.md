@@ -3,7 +3,7 @@
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](./README.md) [![English](https://jaywcjlove.github.io/sb/lang/english.svg)](./README-en.md)
 
 # 字体
-- Liga Monaco
+- [Liga Monaco](../font)
 - Fallback: Monaco
 # 注意
 - `termguicolors` 默认打开
@@ -58,4 +58,9 @@
 - [elm-vim](https://github.com/ElmCast/elm-vim): Elm 官方插件
 - [vim-toml](https://github.com/cespare/vim-toml): TOML 官方插件
 - [vim-go](https://github.com/fatih/vim-go): Go 语言支持
+
+# 配色
+[S1ngS1ng.vim](./S1ngS1ng.vim)
+## 预览
+![vim](./assets/vim.png)
 
