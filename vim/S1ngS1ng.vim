@@ -22,7 +22,7 @@ let g:colors_name = "S1ngS1ng"
 
 hi Normal ctermbg=234 ctermbg=NONE cterm=NONE guifg=#EBEAEB guibg=#272936 gui=NONE
 hi Cursor ctermfg=229 ctermbg=231 cterm=NONE guifg=#ffffaf guibg=#ffffff gui=NONE
-hi Visual ctermfg=NONE ctermbg=230 cterm=NONE guifg=NONE guibg=#ffffd7 gui=NONE
+hi Visual ctermfg=NONE ctermbg=242 cterm=NONE guifg=NONE guibg=#6c6c6c gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3a3a3a gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=NONE
 " Without NONE in ctermbg, there is a weird line on the very right
@@ -54,7 +54,7 @@ hi ErrorMsg ctermfg=160 ctermbg=195 cterm=NONE guifg=#d70000 guibg=#d7ffff gui=N
 hi WarningMsg ctermfg=231 ctermbg=212 cterm=NONE guifg=#ffffff guibg=#ff87d7 gui=NONE
 hi Float ctermfg=141 ctermbg=NONE cterm=NONE guifg=#af87ff guibg=NONE gui=NONE
 hi Function ctermfg=84 ctermbg=NONE cterm=bold guifg=#5fff87 guibg=NONE gui=bold
-hi Identifier ctermfg=165 ctermbg=NONE cterm=bold guifg=#d700ff guibg=NONE gui=bold
+hi Identifier ctermfg=93 ctermbg=NONE cterm=bold guifg=#BD92EA guibg=NONE gui=bold
 hi Keyword ctermfg=92 ctermbg=NONE cterm=NONE guifg=#8700d7 guibg=NONE gui=NONE
 hi Label ctermfg=192 ctermbg=NONE cterm=NONE guifg=#d7ff87 guibg=NONE gui=NONE
 hi NonText ctermfg=231 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE
@@ -148,14 +148,23 @@ hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 hi jsStorageClass ctermfg=177 ctermbg=NONE cterm=bold guifg=#d787ff guibg=NONE gui=NONE
 hi jsDocTags ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
 hi jsAsyncKeyword ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
+hi jsClassKeyword ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
+hi jsOperatorKeyword ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
+hi jsNoise ctermfg=244 ctermbg=NONE cterm=NONE guifg=#808080 guibg=NONE gui=NONE
+hi jsParens ctermfg=244 ctermbg=NONE cterm=NONE guifg=#808080 guibg=NONE gui=NONE
 hi jsForAwait ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
 hi jsVariableDef ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
 hi jsTemplateExpression ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
 hi jsObjectKey ctermfg=209 ctermbg=NONE cterm=NONE guifg=#ff875f guibg=NONE gui=NONE
 hi jsParen ctermfg=211 ctermbg=NONE cterm=NONE guifg=#ff87af guibg=NONE gui=NONE
 hi jsDestructuringBlock ctermfg=214 ctermbg=NONE cterm=NONE guifg=#ffaf00 guibg=NONE gui=NONE
+hi jsFunction ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE
 hi jsFuncArgs ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
+hi jsFuncParens ctermfg=244 ctermbg=NONE cterm=NONE guifg=#808080 guibg=NONE gui=NONE
+hi jsArrowFunction ctermfg=39 ctermbg=NONE cterm=NONE guifg=#80CBC4 guibg=NONE gui=NONE
 hi jsArrowFuncArgs ctermfg=217 ctermbg=NONE cterm=NONE guifg=#ffafaf guibg=NONE gui=NONE
+hi jsOperator ctermfg=39 ctermbg=NONE cterm=NONE guifg=#80CBC4 guibg=NONE gui=NONE
+hi jsThis ctermfg=215 ctermbg=NONE cterm=NONE guifg=#ffaf5f guibg=NONE gui=NONE
 " For TOML
 hi tomlKey ctermfg=209 ctermbg=NONE cterm=NONE guifg=#ff875f guibg=NONE gui=NONE
 hi tomlBoolean ctermfg=177 ctermbg=NONE cterm=NONE guifg=#d787ff guibg=NONE gui=NONE

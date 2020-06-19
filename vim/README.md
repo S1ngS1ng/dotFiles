@@ -62,5 +62,6 @@
 # 配色
 [S1ngS1ng.vim](./S1ngS1ng.vim)
 ## 预览
-![vim](./assets/vim.png)
+![vim](../assets/vim.png)
+![vim-js](../assets/vim-js.png)
 
