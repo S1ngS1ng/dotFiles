@@ -12,6 +12,9 @@
 ### 预览
 ![LigaMonaco](./assets/LigaMonaco-demo.png)
 
+## Sponsor
+[![](./assets/GitAds.png)](https://tracking.gitads.io/?campaign=gitads&repo=dotFiles&redirect=gitads.io)
+
 ## Webstorm
 
 > 安装方法：[点我](#安装)
