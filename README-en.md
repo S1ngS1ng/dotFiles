@@ -13,7 +13,7 @@ LigaMonaco built w/ [Ligaturizer](https://github.com/ToxicFrog/Ligaturizer), inc
 ![LigaMonaco](./assets/LigaMonaco-demo.png)
 
 ## Sponsor
-[![](./assets/GitAds.png)](https://tracking.gitads.io/?campaign=gitads&repo=dotFiles&redirect=gitads.io)
+[![](https://images.gitads.io/dotFiles)](https://tracking.gitads.io/?campaign=gitads&repo=dotFiles&redirect=gitads.io)
 
 ## Webstorm
 
