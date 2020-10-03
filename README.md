@@ -12,10 +12,6 @@
 ### 预览
 ![LigaMonaco](./assets/LigaMonaco-demo.png)
 
-## Sponsor
-[dotFiles](https://github.com/S1ngS1ng/dotFiles) is being sponsored by the following tool; please help to support by taking a look and signing up to a free trial
-[![](https://images.gitads.io/dotFiles)](https://tracking.gitads.io/?campaign=gitads&repo=dotFiles&redirect=gitads.io)
-
 ## Webstorm
 
 > 安装方法：[点我](#安装)
