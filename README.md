@@ -35,9 +35,8 @@
 
 ### 安装
 1. 下载 Webstorm-2016-10-23.jar
-2. 在 WebStorm 中，选择 `File -> Import Settings`，导入下载好的 `.jar` 文件
-3. 打开 `WebStorm -> Preferences -> Plugins -> Browse Repositories`，搜索 Material Theme UI 并安装
-    - 如果安装不成功，点 [这里](https://plugins.jetbrains.com/plugin/8006?pr=) 下载然后手动安装
+2. 在 WebStorm 中，选择 `File -> Manage IDE Settings -> Import Settings`，导入下载好的 `.zip` 文件
+3. ~~Material Theme UI 已移除
 4. 重启 WebStorm，完成安装
     - 非 Mac 用户可能还需要些后续设置，点[这里](#注意事项) 
 

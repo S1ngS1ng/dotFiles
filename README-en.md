@@ -35,8 +35,8 @@ LigaMonaco built w/ [Ligaturizer](https://github.com/ToxicFrog/Ligaturizer), inc
 
 ### Install
 1. Download Webstorm-2016-10-23.jar
-2. Goto `File -> Import Settings` and import that `.jar` file you just downloaded
-3. Goto `WebStorm -> Preferences -> Plugins -> Browse Repositories`, Search for `Material Theme UI` and install this Plugin
+2. Goto `File -> Manage IDE Settings -> Import Settings` and import that `.zip` file you just downloaded
+3. ~~`Material Theme UI`~~ Removed
 4. Restart WebStorm
     - Non Mac users may need a little more settings, click [here](#Notice) 
 
