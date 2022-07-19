@@ -14,6 +14,13 @@ noremap <Leader>j <c-w>j
 noremap <Leader>k <c-w>k
 noremap <Leader>l <c-w>l
 
+" VCS next/prev change
+noremap <Leader>J :action VcsShowNextChangeMarker<CR>
+noremap <Leader>K :action VcsShowPrevChangeMarker<CR>
+
+" VCS annotate
+noremap <Leader>a :action Annotate<CR>
+
 " Scroll horizontally
 " Leader + H/L
 noremap <Leader>H :action ScrollPane-scrollLeft<CR>
@@ -21,8 +28,14 @@ noremap <Leader>L :action ScrollPane-scrollRight<CR>
 
 " Switch between tabs (Hammerspoon?)
 " Leader + t/T
-nnoremap <Leader>t :action VimMotionNextTab<CR>
-nnoremap <Leader>p :action VimMotionPreviousTab<CR>
+nnoremap <Leader>t gt
+nnoremap <Leader>p gT
+
+" Toogle Project (tree) panel
+nnoremap <Leader>f :action SelectIn<CR>
+
+" Toggle Soft Wraps
+nnoremap <Leader>s :action EditorToggleUseSoftWraps<CR>
 
 " Keep visual mode when setting indent
 vnoremap < <gv
@@ -30,6 +43,7 @@ vnoremap > >gv
 
 " To enable copy from system
 set clipboard=unnamed
+set clipboard+=ideaput
 set encoding=utf8
 
 " Required!
@@ -45,6 +59,7 @@ set expandtab
 set showcmd
 set showmatch
 set ff=unix
+set ideamarks
 
 " Use existing tab or open newtab
 :set switchbuf+=usetab,newtab
@@ -54,7 +69,6 @@ set rnu
 
 " Highlight current cursor line
 set cursorline
-" autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
 " Set global ignore
 set wildignore+=./node_modules/**,./build
@@ -63,8 +77,8 @@ set wildignore+=./node_modules/**,./build
 set foldmethod=syntax
 set nofoldenable
 
-" Fold shortcut map
-nnoremap <Leader>a za
-nnoremap <Leader>R zR
-vnoremap <Leader>a za
-vnoremap <Leader>R zR
+" Set Plugin
+set surround
+set easymotion
+
+set ideajoin
