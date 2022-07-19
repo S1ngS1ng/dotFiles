@@ -4,10 +4,19 @@
 
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](./README.md) [![English](https://jaywcjlove.github.io/sb/lang/english.svg)](./README-en.md)
 
-## 我使用的字体（4/14/2019 更新）
+## 我使用的字体（7/19/2022 更新）
+### 2019
 使用 [Ligaturizer](https://github.com/ToxicFrog/Ligaturizer) build 的 LigaMonaco，包含两个版本：
 - [常规体](./font/LigaMonaco.ttf)
 - [粗体](./font/LigaMonacoBold.ttf)
+### 2020
+使用 [Recursive Sans & Mono](https://github.com/arrowtype/recursive)，build 包含 ligature 的四个版本：
+- [常规体](./font/RecMonoLiga-Regular-1.070.ttf)
+- [粗体](./font/RecMonoLiga-Bold-1.070.ttf)
+- [斜体](./font/RecMonoLiga-Italic-1.070.ttf)
+- [粗体 + 斜体](./font/RecMonoLiga-BoldItalic-1.070.ttf)
+### 2022
+使用 [MonoLisa](https://www.monolisa.dev/)
 
 ### 预览
 ![LigaMonaco](./assets/LigaMonaco-demo.png)
