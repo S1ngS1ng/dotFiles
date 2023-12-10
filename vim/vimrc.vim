@@ -42,8 +42,8 @@ syntax enable
 syntax on
 set hlsearch
 set wrapscan
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set showcmd
 set showmatch
@@ -65,7 +65,6 @@ set nofoldenable
 
 " Set color pattern
 color S1ngS1ng
-" color dracula
 
 call plug#begin('~/.vim/plugged')
 
@@ -84,18 +83,8 @@ Plug 'tpope/vim-surround'
 " Vim auto-pairs
 Plug 'jiangmiao/auto-pairs'
 
-" Dracular Theme
-Plug 'dracula/vim'
-
 " Auto Complete
 Plug 'ervandew/supertab'
-
-" Indent Level
-Plug 'yggdroot/indentline'
-
-" Easy grep
-" Plug 'dkprice/vim-easygrep'
-Plug 'wincent/ferret'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
@@ -113,15 +102,9 @@ Plug 'plasticboy/vim-markdown'
 " JSON
 Plug 'elzr/vim-json'
 
-" Python
-Plug 'klen/python-mode', { 'branch': 'develop' } 
-
 " FZF
-Plug '/usr/local/opt/fzf'
+Plug '/opt/homebrew/bin/fzf'
 Plug 'junegunn/fzf.vim'
-
-" Allign Code
-Plug 'godlygeek/tabular'
 
 " Syntax check
 Plug 'w0rp/ale'
@@ -138,17 +121,11 @@ Plug 'airblade/vim-gitgutter'
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
 
-" elm support
-Plug 'elmcast/elm-vim'
-
 " TOML support
 Plug 'cespare/vim-toml'
 
-" Go support
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 " CSS3 support
-" Plug 'hail2u/vim-css3-syntax'
+Plug 'hail2u/vim-css3-syntax'
 
 " Sass/Scss support
 Plug 'cakebaker/scss-syntax.vim'
@@ -273,4 +250,3 @@ call EnableGoTmplSyntax()
 set switchbuf+=newtab
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
-
